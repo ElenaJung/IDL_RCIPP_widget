@@ -1,3 +1,5 @@
+# IDL RCIPP Widget
+
 A Radiometric and Colourimetric Image Processing Pipeline (RCIPP) widget for changing an image taken by the Martian rovers, Spirit and Opportunity, to what it would look like under Earth's lighting conditions. This also works for Aberystwyth University PanCam Emulator (AUPE) images. It can also create a graph for hyperspectral Regions Of Interest (ROI).
 
 **This program requires the [IDL environment](http://www.harrisgeospatial.com/IntelliEarthSolutions/GeospatialProducts/IDL.aspx) to run.**
@@ -6,9 +8,9 @@ Further Information:
 
 [https://www.aber.ac.uk/en/research/excellence/impact/mars/](https://www.aber.ac.uk/en/research/excellence/impact/mars/)
 
-# INSTRUCTIONS
+## INSTRUCTIONS
 
-For raw AUPE data (test AUPE images provided in bin/Test_AUPE_Images)
+### For raw AUPE data (test AUPE images provided in bin/Test_AUPE_Images)
 1. Navigate to the bin folder
 2. Start RCIPP.sav file 
 3. For AUPE data: make sure that all data is labelled in the same manner the same (e.g.  they should all follow: f01.png, f02.png etc.. or they should follow: f1.png, f2.png etc) 
@@ -37,7 +39,7 @@ For raw AUPE data (test AUPE images provided in bin/Test_AUPE_Images)
 25. Press ‘Radiance Scaling Factor and Offset’ (The Radiance Scaling Factor and Offset will be placed into a file in the directory. Graphs of the line of best fit will open up )
 
 
-# For processed AUPE or PDS data
+### For processed AUPE or PDS data
 1. Press either ‘Load AUPE data’ or ‘Load PDS data’
 2. Select one or three files to get a black and white or colour image respectively (please note that R* cannot currently be created for RWAC, so it is advisable to use LWAC data if pressing the ‘Load AUPE data’ button)
 3. Press ‘generate R*’ 
@@ -57,8 +59,8 @@ If the “generate R* for LWAC” and “generate R* for RWAC” buttons appear,
 14. Press ‘restore x,y,Y’ if you have previously saved them
 15. Press ‘CIE to sRGB’
 
-# For ‘Create ROI graph’
-## AUPE data:
+### For ‘Create ROI graph’
+#### AUPE data:
 
 1.  Once the button has been pressed a new widget will open up
 2. Select if you want to create a graph for LWAC data, RWAC data or both
@@ -74,7 +76,7 @@ If the “generate R* for LWAC” and “generate R* for RWAC” buttons appear,
 12. Press ‘Create Graph’
 13. A graph should open up
 
-# For PDS Data:
+#### For PDS Data:
 14. Once the button has been pressed a new widget will open up
 15. Press the ‘Select ROI’
 16. Using the XROI window that appears, select one ROI and save it in a sensible directory
@@ -87,7 +89,7 @@ If the “generate R* for LWAC” and “generate R* for RWAC” buttons appear,
 23. Close the black XROI windows that open up (this has to be done otherwise the program cannot continue)
 24. A graph should open up
 
-# Please note:
+### Please note:
 The ROI graph can currently only be created for LWAC AUPE and PDS data. That means that for AUPE data, the graph will only be drawn over the wavelengths: ~400 to ~700
 The smaller widgets that open up when pressing the buttons ‘radiance scaling factor and offset’, ‘create ROI graph’ and ‘generate CIE data’, can only be opened ONCE. This means that if they need to be pressed again, the program needs to be closed and opened up again
 The normalisation that occurs during the ‘Create CIE XYZ’ is currently set to 10. If the sRGB image comes out white, then this needs to be increased. If it comes out black then this needs to be decreased. This has to be done in the source code.
